@@ -14,13 +14,13 @@ public class BasePage {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://admin-demo.nopcommerce.com/login");
+        driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
     public void tearDown(){
         if (driver != null){
-           // driver.quit();
+           driver.quit();
         }
     }
 }

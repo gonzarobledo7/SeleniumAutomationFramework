@@ -11,12 +11,12 @@ public class LoginTest extends BasePage {
     public void testValidLogin(){
         LoginPage loginpage = new LoginPage(driver);
 
-        loginpage.enterUsername("admin@yourstore.com");
-        loginpage.enterPassword("admin");
+        loginpage.enterUsername("standard_user");
+        loginpage.enterPassword("secret_sauce");
         loginpage.clickLogin();
 
         System.out.println("------------> TITLE OF THE PAGE IS----------> " +driver.getTitle());
-        Assert.assertEquals(driver.getTitle(), "nopCommerce demo store. Login");
+        Assert.assertEquals(driver.getTitle(), "Swag Labs");
 
     }
 }

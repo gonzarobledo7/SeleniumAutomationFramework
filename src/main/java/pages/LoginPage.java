@@ -9,9 +9,9 @@ public class LoginPage {
 
 
     //Locators
-    private By usernameTextBox = By.id("Email");
-    private By passwordTextBox = By.id("Password");
-    private By loginButton = By.xpath("//form//button[@type='submit']");
+    private By usernameTextBox = By.id("user-name");
+    private By passwordTextBox = By.id("password");
+    private By loginButton = By.id("login-button");
 
     //Constructor
     public LoginPage(WebDriver driver) {
