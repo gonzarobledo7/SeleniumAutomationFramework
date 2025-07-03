@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.Log;
 
 public class LoginPage {
 
@@ -12,6 +13,7 @@ public class LoginPage {
     private By usernameTextBox = By.id("user-name");
     private By passwordTextBox = By.id("password");
     private By loginButton = By.id("login-button");
+    private By expectedErrorMessage = By.xpath("//*[@id='login_button_container']//form//h3");
 
     //Constructor
     public LoginPage(WebDriver driver) {
@@ -32,8 +34,14 @@ public class LoginPage {
     }
 
     public void clickLogin(){
+
+        Log.info("Clicking Login Button");
         driver.findElement(loginButton).click();
 
+    }
+
+    public String getErrorText(){
+        return driver.findElement(expectedErrorMessage).getText();
     }
 
 }
