@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import utils.ExtentReportManager;
 import utils.Log;
 
-public class BasePage {
+public class BaseTest {
 
     protected WebDriver driver;
     protected static ExtentReports extent;
