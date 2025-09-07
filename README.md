@@ -52,3 +52,10 @@ src/test/java/steps/Hooks.java toma screenshot en @After cuando el escenario fal
 
 ▶️ Cómo correr
 Local (headless opcional)
+./gradlew clean test -Dheadless=true -Dbrowser=chrome
+
+Correr por tags (desde CLI)
+
+En Cucumber 7 podés sobrescribir los tags del runner con:
+./gradlew test -Dcucumber.filter.tags="@smoke"
+
